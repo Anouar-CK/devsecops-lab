@@ -4,7 +4,9 @@ import subprocess
 import hashlib
 import os
 app = Flask(__name__)
+
 SECRET_KEY = "dev-secret-key-12345"   # Hardcoded secret
+
 @app.route("/login", methods=["POST"])
 def login():
     username = request.json.get("username")
